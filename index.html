@@ -132,7 +132,7 @@
         <a class="button" href="resume.pdf" target="_blank" rel="noopener">View résumé</a>
         <a class="button secondary" href="#experience">View capture experience</a>
       </div>
-      <!-- Add your portrait here after uploading profile.jpg. -->
+      <img class="portrait" src="profile.png" alt="Illustrated raccoon avatar wearing a stone-grey suit" width="210" height="210">
     </div>
 
     <section id="about">
@@ -164,7 +164,11 @@
 
     <section id="projects">
       <h2>Selected projects</h2>
-      <p>These cards are generated automatically from my public GitHub repositories.</p>
+      <article class="card" style="margin-bottom: 1.25rem;">
+<h3><a href="https://github.com/JJ4045/capture-management-case-study#readme">Capture Management &amp; Teaming Facilitation</a></h3>
+<p>Professional experience coordinating a teaming cooperative, supporting bid/no-bid follow-through, and developing win strategies before proposal writing. Supported four companies that won contracts, including one Navy SeaPort contract vehicle award.</p>
+<a href="https://github.com/JJ4045/capture-management-case-study#readme">Read the case study</a> &middot; <a href="https://github.com/JJ4045/capture-management-case-study">View repository</a>
+</article><p>More public work from GitHub:</p>
       <div id="project-list" class="cards" aria-live="polite">
         <p class="note">Loading projects…</p>
       </div>
@@ -233,7 +237,7 @@
         const website = `${username}.github.io`.toLowerCase();
         const selected = repos
           .filter(repo => !repo.fork && !repo.archived &&
-            repo.name.toLowerCase() !== website)
+            repo.name.toLowerCase() !== website && repo.name.toLowerCase() !== "capture-management-case-study")
           .slice(0, 6);
 
         list.replaceChildren();
@@ -264,6 +268,7 @@
   </script>
 </body>
 </html>
+
 
 
 
