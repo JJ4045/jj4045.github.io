@@ -34,6 +34,12 @@ h2 { margin-bottom: 1.2rem; font-weight: 700; }
 .button.secondary { background: white; color: var(--navy); border: 1px solid var(--navy); }
 .button:hover { background: #111e63; color: white; opacity: 1; }
 .note, .muted { color: var(--muted); }
+#certifications { display: flex; align-items: center; gap: 2rem; background: white; padding: 1.5rem 2rem; border: 1px solid var(--border); border-radius: .6rem; }
+.certification-copy { flex: 1; min-width: 0; }
+.certification-copy h2 { margin-top: 0; margin-bottom: .7rem; }
+.certification-copy p { margin: .6rem 0; }
+.certification-icons { display: flex; flex-shrink: 0; gap: 1.25rem; align-items: center; }
+.certification-icons img { display: block; width: 116px; height: auto; }
 #experience ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 #experience li { background: white; padding: 1.25rem; border: 1px solid var(--border); border-radius: .6rem; }
 #experience li strong { display: block; color: var(--navy); margin-bottom: .5rem; }
@@ -63,6 +69,8 @@ th, td { border-color: var(--border); }
   .portrait { width: 160px; height: 160px; justify-self: center; }
   #experience ul, #projects { grid-template-columns: 1fr; }
   #contact { padding: 1.25rem; }
+  #certifications { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1.25rem; }
+  .certification-icons { align-self: center; }
   main { padding-top: 2rem; }
 }
 @media print { header, footer { background: white; color: var(--ink); } .card, .status, #contact { box-shadow: none; } }
